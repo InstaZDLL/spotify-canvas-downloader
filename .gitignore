@@ -130,3 +130,6 @@ dmypy.json
 
 # librespot cerd cache
 credentials.json
+
+# Local archive of the previous Python implementation
+/legacy-python/

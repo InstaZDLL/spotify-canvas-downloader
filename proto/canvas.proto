@@ -2,9 +2,6 @@ syntax = "proto3";
 
 package com.spotify.canvazcache;
 
-option optimize_for = CODE_SIZE;
-option java_package = "com.spotify.canvaz";
-
 enum Type {
     IMAGE = 0;
     VIDEO = 1;
@@ -33,7 +30,6 @@ message EntityCanvazResponse {
         string etag = 9;
         string canvas_uri = 11;
     }
-
     int64 ttl_in_seconds = 2;
 }
 

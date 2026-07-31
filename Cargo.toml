@@ -1,0 +1,30 @@
+[package]
+name = "spotify-canvas-downloader"
+version = "0.2.0"
+edition = "2024"
+rust-version = "1.85"
+license = "GPL-3.0-only"
+description = "HTTP service that resolves Spotify Canvas URLs"
+
+[dependencies]
+axum = "0.8.9"
+base64 = "0.22.1"
+dotenvy = "0.15.7"
+http = "1.4.0"
+prost = "0.14.4"
+reqwest = { version = "0.13.4", default-features = false, features = ["json", "query", "rustls"] }
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
+thiserror = "2.0.19"
+tokio = { version = "1.53.1", features = ["macros", "net", "rt-multi-thread", "sync", "time"] }
+totp-rs = "5.7.2"
+tower-http = { version = "0.7.0", features = ["cors", "trace"] }
+tracing = "0.1.44"
+tracing-subscriber = { version = "0.3.23", features = ["env-filter", "fmt"] }
+
+[build-dependencies]
+prost-build = "0.14.4"
+protoc-bin-vendored = "3.2.0"
+
+[dev-dependencies]
+tower = { version = "0.5.3", features = ["util"] }
